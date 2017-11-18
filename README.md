@@ -3,9 +3,9 @@
 * Authentication
 * Database - CRUD
 * Storage
-* Hositing
+* Hosting
 ------------
 ## Steps for Installation :
-* npm install -g create-react-app firebase
+* npm install -g create-react-app firebase firebase-tools
 * npm install
 * npm start
