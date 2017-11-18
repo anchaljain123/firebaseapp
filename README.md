@@ -9,3 +9,7 @@
 * npm install -g create-react-app firebase firebase-tools
 * npm install
 * npm start
+
+For Hosting
+firebase init
+firbase deploy
