@@ -11,9 +11,7 @@ class Storage extends Component{
         }
     }
 
-
     uploadImage = (e) => {
-
         this.setState({
             imageFileName : e.target.files[0].name
         });
@@ -32,12 +30,22 @@ class Storage extends Component{
 
     };
 
+    deleteImage = () => {
+        let storageRef = firebase.storage().ref('AppGallery/1c0d0048e3d282911c57aab2c83eb4a0');
+        storageRef.delete().then(()=>{
+            alert('file has been deleted successfully')
+        })
+    };
+
     render(){
         return(
             <div>
+                <div>
                 <h3>Upload File</h3>
                 <input type={'file'} onChange={this.uploadImage}/>
                 <progress value={this.state.imageUploader} max={'100'}>{this.state.imageUploader}%</progress>
+                <br/><br/><input type={'button'} value={'DeleteImage'} onClick={this.deleteImage} className={'delbtn'}/>
+                </div>
             </div>
         )
     }

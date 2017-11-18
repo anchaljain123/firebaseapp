@@ -12,4 +12,16 @@
 
 For Hosting
 firebase init
+add scripts to firebase.json
+{
+  "hosting": {
+    "public": "build",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
+npm run build
 firbase deploy

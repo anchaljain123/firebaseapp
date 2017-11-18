@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import * as firebase from 'firebase';
-
+import Storage from './storage'
 class Dashboard extends Component{
     constructor(){
         super();
@@ -41,6 +41,7 @@ class Dashboard extends Component{
                     <input type={'submit'} onClick={this.sendData} value={'save to DB'}/>
                 </form>
                 <p>{this.state.name}-{this.state.age}</p>
+                <Storage/>
             </div>
         )
     }
